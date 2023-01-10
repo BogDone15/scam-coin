@@ -82,9 +82,9 @@ $(document).ready(function () {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       regPopup.classList.add('show-popup');
-      fullpage.classList.add('hide-all');
-      menu.classList.add('hide-all');
-      header.classList.add('hide-all');
+      // fullpage.classList.add('hide-all');
+      // menu.classList.add('hide-all');
+      // header.classList.add('hide-all');
 
       if (repeatReg) {
         repeatReg = false;

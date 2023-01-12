@@ -1139,6 +1139,15 @@ body {
   }
 }
 
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0);
+  }
+  100% {
+    filter: drop-shadow(0 0 .1rem #edbb63);
+  }
+}
+
 .manager {
   background: url('../img/cooperation-bg.svg') center/cover no-repeat;
 
@@ -1152,6 +1161,11 @@ body {
     max-width: 115.4rem;
     width: 100%;
     margin: 0 auto;
+    // transition: all .2s ease;
+    animation: blink .2s ease infinite;
+    // &:hover {
+    //   filter: drop-shadow(0 0 1.5rem #edbb63);
+    // }
   }
 
   &__subtitle {

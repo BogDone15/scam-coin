@@ -396,8 +396,8 @@ body {
         width: 92%;
         top: 1.1rem;
         height: 8px;
-        border-left: 3px solid #fff;
-        border-right: 3px solid #fff;
+        border-left: .3rem solid #fff;
+        border-right: .3rem solid #fff;
         transition: all .2s ease;
         z-index: 3;
       }
@@ -408,8 +408,8 @@ body {
         width: 92%;
         bottom: 1.1rem;
         height: 8px;
-        border-left: 3px solid #fff;
-        border-right: 3px solid #fff;
+        border-left: .3rem solid #fff;
+        border-right: .3rem solid #fff;
         transition: all .2s ease;
         z-index: 3;
       }
@@ -421,8 +421,8 @@ body {
         left: 0.9rem;
         width: 92%;
         height: 3px;
-        border-left: 8px solid #fff;
-        border-right: 8px solid #fff;
+        border-left: .8rem solid #fff;
+        border-right: .8rem solid #fff;
         transition: all .2s ease;
         z-index: 3;
       }
@@ -434,79 +434,33 @@ body {
         left: .9rem;
         width: 92%;
         height: 3px;
-        border-left: 8px solid #fff;
-        border-right: 8px solid #fff;
+        border-left: .8rem solid #fff;
+        border-right: .8rem solid #fff;
         transition: all .2s ease;
         z-index: 3;
       }
-
-      // &:last-child {
-      //   &::before {
-      //     top: .9rem;
-      //     left: 1rem;
-      //     border-left: 6px solid #fff;
-      //     border-right: 6px solid #fff;
-      //            z-index: 3;
-      //   }
-
-      //   &::after {
-      //     bottom: 1rem;
-      //     left: 1rem;
-      //     border-left: 6px solid #fff;
-      //     border-right: 6px solid #fff;
-      //            z-index: 3;
-      //   }
-
-      //   .btn__element-top {
-      //     left: 1rem;
-      //     width: 91%;
-      //     border-left: 3px solid #fff;
-      //     border-right: 3px solid #fff;
-      //            z-index: 3;
-      //   }
-
-      //   .btn__element-bottom {
-      //     left: .99rem;
-      //     width: 91%;
-      //     border-left: 3px solid #fff;
-      //     border-right: 3px solid #fff;
-      //            z-index: 3;
-      //   }
-
-      //   &:hover {
-      //     .btn__element-bottom {
-      //       height: 11px;
-      //     }
-
-      //     .btn__element-top {
-      //       height: 11px;
-      //     }
-
-      //     &::before,
-      //     &::after {
-      //       border-left: 11px solid #fff;
-      //       border-right: 11px solid #fff;
-      //     }
-      //   }
-      // }
 
       &:hover {
         .main__btns-hover {
           opacity: 1;
         }
 
+        &>span {
+          color: #000;
+        }
+
         .btn__element-bottom {
-          height: 11px;
+          height: 1.1rem;
         }
 
         .btn__element-top {
-          height: 11px;
+          height: 1.1rem;
         }
 
         &::before,
         &::after {
-          border-left: 11px solid #fff;
-          border-right: 11px solid #fff;
+          border-left: 1.1rem solid #fff;
+          border-right: 1.1rem solid #fff;
         }
       }
 
@@ -514,11 +468,12 @@ body {
         position: absolute;
         right: 3rem;
         bottom: 2rem;
-        color: #000;
+        color: #fff;
         font-size: 1.9rem;
         font-weight: 700;
         text-align: left;
         text-transform: uppercase;
+        transition: all .2s ease;
       }
     }
   }
@@ -712,10 +667,11 @@ body {
       height: 7rem;
       transform: rotate(-90deg);
       transition: all .2s ease;
+      border-radius: 50%;
       cursor: pointer;
 
       &:hover {
-        opacity: .8;
+        box-shadow: 0px 0px 2.5rem 0px #76c48d;
       }
     }
 
@@ -724,10 +680,11 @@ body {
       height: 7rem;
       transform: rotate(270deg);
       transition: all .2s ease;
+      border-radius: 50%;
       cursor: pointer;
 
       &:hover {
-        opacity: .8;
+        box-shadow: 0px 0px 2.5rem 0px #76c48d;
       }
     }
   }
@@ -791,6 +748,7 @@ body {
     color: rgba(118, 196, 141, .5);
     font-size: 5.5rem;
     font-weight: 700;
+    font-style: italic;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -912,8 +870,7 @@ body {
   }
 
   &__block {
-    max-width: 128.9rem;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -2029,7 +1986,6 @@ body {
     background: #292b29;
     border: none;
     outline: none;
-    // border-bottom: 2px solid #76c48e;
     width: 100%;
     font-size: 1.6rem;
     height: 17rem;
@@ -2059,13 +2015,6 @@ body {
         border-left: 2px solid #76c48e;
       }
 
-    }
-
-    img {
-      position: relative;
-      z-index: 3;
-      width: 2.5rem;
-      height: 2.5rem;
     }
 
     label {

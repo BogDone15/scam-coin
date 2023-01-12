@@ -57,6 +57,7 @@
   </header>
 
 
+  <div class="page">
     <section class="advertisers">
       <div class="container">
         <div class="advertisers-side">
@@ -64,9 +65,10 @@
         </div>
         <h2 class="advertisers__title-top">HELLO</h2>
         <h2 class="advertisers__title-bottom">ADVERTISER</h2>
-        <h2 class="advertisers__subtitle">
-          &gt; Effective tools generate big sales &lt;
-        </h2>
+        <h2 class="advertisers__subtitle" id="advertisers1"></h2>
+        <div id="advertisers-strings1">
+          <span>&gt; Effective tools generate big sales &lt;</span>
+        </div>
         <div class="advertisers__wrapper">
           <div class="advertisers__left">
             <div class="advertisers__left-side">
@@ -77,17 +79,13 @@
                 <img src="img/up.svg" alt="" class="prev-slide">
                 <img src="img/down.svg" alt="" class="next-slide">
               </div>
-              <div class="advertisers__left-side-bottom">
-                <p>FDODF SOFKDS FDODF SOFKDS FDODF SOFKDS </p>
-                <p>FDODF SOFKDS </p>
-              </div>
             </div>
             <div class="advertisers__left-block">
               <div class="advertisers__left-block-path">
-                C /DATA/FOLDER/MAIN OPTIONS
+                C /DATA/FOLDER/MAIN OPTIONS #1
               </div>
               <div class="advertisers__left-block-cover">
-                <img src="img/code.png" class="advertisers__left-block-code">
+                <img src="img/skull.png" alt="" class="advertisers__left-block-cover-img">
                 <div class="advertisers__left-block-suptitle">
                   GET DETAILED
                 </div>
@@ -197,7 +195,46 @@
       </div>
     </section>
 
-    <div class="cooperation">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__item">
+          <a href="terms.html" class="cooperation__logo">
+            <img src="img/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="footer__item">
+          <p class="cooperation__text">
+            DON`T HOLD - LET`S TALK!
+          </p>
+          <div class="cooperation__socials">
+            <a href="#">
+              <img src="img/tg.svg" alt="">
+            </a>
+            <a href="#">
+              <img src="img/fb.svg" alt="">
+            </a>
+            <a href="#">
+              <img src="img/in.svg" alt="">
+            </a>
+          </div>
+          <p class="cooperation__rights">
+            SCAMCOIN NETWORK 2022 <br>
+            ALL RIGHTS RESERVED
+          </p>
+        </div>
+        <div class="footer__item">
+          <nav>
+            <ul>
+              <li><a href="#">Terms and conditins</a></li>
+              <li><a href="#">Private POLICY</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="cooperation">
       <nav>
         <ul>
           <li><a href="#">Affiliates</a></li>
@@ -228,10 +265,11 @@
         SCAMCOIN NETWORK 2022 <br>
         ALL RIGHTS RESERVED
       </p>
-    </div>
+    </div> -->
+  </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.min.js"></script>
+  <script src="js/typed.js"></script>
 
   <script>
     const textarea = document.querySelector('textarea')
@@ -265,7 +303,7 @@
 
     let counter = 1;
 
- 
+
 
     const showNextSlide = () => {
       if (counter < 6) {
@@ -302,9 +340,45 @@
     }
 
     nextSlide.addEventListener('click', (showNextSlide))
-prevSlide.addEventListener('click', (showPrevSlide))
+    prevSlide.addEventListener('click', (showPrevSlide))
 
-</script>
+    var typed = new Typed('#advertisers1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#advertisers-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+
+
+    const advertisersLeft = document.querySelector('.advertisers__left');
+
+    const advertisersImg = document.querySelector(
+      '.advertisers__left-block-cover-img'
+    );
+    const advertisersRightTop = document.querySelector('.advertisers__right-top');
+    const advertisersRightBottom = document.querySelector(
+      '.advertisers__right-bottom'
+    );
+
+    setTimeout(() => {
+      advertisersLeft.classList.add('scale')
+    }, 1500);
+
+    setTimeout(() => {
+      advertisersImg.classList.add('opacity')
+    }, 1800);
+
+    setTimeout(() => {
+      advertisersRightTop.classList.add('scale')
+    }, 1800);
+
+    setTimeout(() => {
+      advertisersRightBottom.classList.add('scale')
+    }, 1800);
+  </script>
 
 </body>
 

@@ -109,24 +109,36 @@
                 <div class="main__wrapper">
                     <div class="main__content">
                         <h3 class="main__suptitle">
-                            PRIVATE AFFILIATE NETWORK
+                            <div id="coin1"></div>
                         </h3>
-                        <img src="img/text.png" alt="" class="main__title">
-                        <p class="main__text">
-                            WE ARE A COMMUNITY OF IT SPECIALISTS - OUR STRATEGIES <br>
-                            WILL HELP YOU EARN MORE
-                        </p>
+                        <img src="img/text.svg" alt="" class="main__title">
+                        <div class="main__text">
+                            <div id="coin2"></div>
+                            <div id="coin3"></div>
+                        </div>
+
+                        <div id="coin-strings1">
+                            <span> PRIVATE AFFILIATE NETWORK</span>
+                        </div>
+                        <div id="coin-strings2">
+                            <span>WE ARE A COMMUNITY OF IT SPECIALISTS - OUR STRATEGIES</span>
+                        </div>
+                        <div id="coin-strings3">
+                            <span>WILL HELP YOU EARN MORE</span>
+                        </div>
                         <div class="main__btns">
                             <a href="#" class="btn">
                                 <div class="btn__element-top"></div>
                                 <div class="btn__element-bottom"></div>
-                                <img src="img/btn1.png" alt="">
+                                <img src="img/btn1.svg" alt="" class="main__btns-normal">
+                                <img src="img/btn2.svg" alt="" class="main__btns-hover">
                                 <span>CLICK</span>
                             </a>
                             <a href="#" class="btn reg-btn">
                                 <div class="btn__element-top"></div>
                                 <div class="btn__element-bottom"></div>
-                                <img src="img/btn2.png" alt="">
+                                <img src="img/btn1.svg" alt="" class="main__btns-normal">
+                                <img src="img/btn2.svg" alt="" class="main__btns-hover">
                                 <span>CLICK</span>
                             </a>
                         </div>
@@ -145,6 +157,7 @@
 
         <section class="garant section" id="section1">
             <div class="container">
+                <img src="img/garant-img.png" alt="" class="garant__sqr">
                 <div class="garant__numbers">
                     <code>0</code>
                     <code>0</code>
@@ -197,12 +210,20 @@
                     <code>0</code>
                     <code>0</code>&nbsp;
                 </div>
-                <h2 class="garant__suptitle">WE GARANTEE YOU</h2>
+                <div id="cash-strings11">
+                    <span>WE GARANTEE YOU</span>
+                </div>
+                <div id="cash-strings12">
+                    <span>IN 3 EASY STEPS TO START NOW</span>
+                </div>
+
+                <h2 class="garant__suptitle" id="cash11"></h2>
                 <a href="#" class="garant__logo">
                     <img src="img/cash.png" alt="">
                 </a>
-                <h2 class="garant__subtitle">IN 3 EASY STEPS TO START NOW</h2>
+                <h2 class="garant__subtitle" id="cash12"></h2>
                 <div class="garant__wrapper">
+                    <div class="garant__bg"></div>
                     <div class="garant__item">
                         <h3 class="garant__title">
                             Complete a simple registration
@@ -236,58 +257,112 @@
         </section>
 
         <section class="benefits section" id="section2">
-            <div class="slide active">
-                <div class="container">
-                    <div class="benefits__wrapper ">
-                        <div class="benefits__left">
-                            <div class="benefits__title">
-                                <img src="img/benefits-title.png" alt="">
-                            </div>
-                            <div class="benefits__content">
-                                <h2 class="benefits__subtitle">
-                                    Timely payments
-                                </h2>
-                                <p class="benefits__text">
-                                    We trust you, so we make payments weekly. <br>
-                                    We trust you, so we make payments weekly.
-                                </p>
-                            </div>
-                            <div class="main__btns">
-                                <a href="#" class="btn">
-                                    <div class="btn__element-top"></div>
-                                    <div class="btn__element-bottom"></div>
-                                    <img src="img/btn1.png" alt="">
-                                    <span>CLICK</span>
-                                </a>
-                                <a href="#" class="btn reg-btn">
-                                    <div class="btn__element-top"></div>
-                                    <div class="btn__element-bottom"></div>
-                                    <img src="img/btn2.png" alt="">
-                                    <span>CLICK</span>
-                                </a>
-                            </div>
+            <div class="container">
+                <div class="benefits__wrapper ">
+                    <div class="benefits__left">
+                        <div class="benefits__title">
+                            <img src="img/benefits-title.svg" alt="">
                         </div>
-                        <div class="benefits__right">
-                            <div class="benefits__num">
-                                <div></div>
-                                <div><span class="benefits__pos">1</span>/6</div>
+                        <div class="benefits__content">
+                            <h2 class="benefits__subtitle" data-item="1">
+                               1 Timely payments
+                            </h2>
+                            <h2 class="benefits__subtitle" data-item="2">
+                               2 Timely payments
+                            </h2>
+                            <h2 class="benefits__subtitle" data-item="3">
+                                3Timely payments
+                            </h2>
+                            <h2 class="benefits__subtitle" data-item="4">
+                               4 Timely payments
+                            </h2>
+                            <h2 class="benefits__subtitle" data-item="5">
+                                5Timely payments
+                            </h2>
+                            <h2 class="benefits__subtitle" data-item="6">
+                                6Timely payments
+                            </h2>
+                            <p class="benefits__text" data-benefits="1" id="benefits1"></p>
+                            <div id="benefits-strings1">
+                                <span>We trust you, so we make payments weekly.</span>
                             </div>
-                            <div class="benefits__img">
-                                <img src="img/benefits1.png" alt="">
+                            <p class="benefits__text" data-benefits="2" id="benefits2"></p>
+                            <div id="benefits-strings2">
+                                <span>We trust you, so we make payments weekly.</span>
                             </div>
+                            <p class="benefits__text" data-benefits="3" id="benefits3"></p>
+                            <div id="benefits-strings3">
+                                <span>We trust you, so we make payments weekly.</span>
+                            </div>
+                            <!-- <p class="benefits__text" data-item="3">
+                                3We trust you, so we make payments weekly. <br>
+                                We trust you, so we make payments weekly.
+                                2We trust you, so we make payments weekly. <br>
+                                We trust you, so we make payments weekly.
+                            </p>
+                            <p class="benefits__text" data-item="4">
+                                4We trust you, so we make payments weekly. <br>
+                                We trust you, so we make payments weekly.
+                            </p>
+                            <p class="benefits__text" data-item="5">
+                                5We trust you, so we make payments weekly. <br>
+                                We trust you, so we make payments weekly.
+                            </p>
+                            <p class="benefits__text" data-item="6">
+                                6We trust you, so we make payments weekly. <br>
+                                We trust you, so we make payments weekly.
+                            </p> -->
                         </div>
-                        <div class="benefits__indicator">
-                            <div class="benefits__indicator-item" style="background: #131c19;"></div>
-                            <div class="benefits__indicator-item"></div>
-                            <div class="benefits__indicator-item"></div>
-                            <div class="benefits__indicator-item"></div>
-                            <div class="benefits__indicator-item"></div>
-                            <div class="benefits__indicator-item"></div>
+            
+                        <div class="main__btns">
+                            <a href="#" class="btn">
+                                <div class="btn__element-top"></div>
+                                <div class="btn__element-bottom"></div>
+                                <img src="img/btn1.png" alt="">
+                                <span>CLICK</span>
+                            </a>
+                            <a href="#" class="btn reg-btn">
+                                <div class="btn__element-top"></div>
+                                <div class="btn__element-bottom"></div>
+                                <img src="img/btn2.png" alt="">
+                                <span>CLICK</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="benefits__right">
+                        <div class="benefits__num">
+                            <div></div>
+                            <div><span class="benefits__pos">1</span>/6</div>
+                        </div>
+                        <div class="benefits__img">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="1">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="2">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="3">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="4">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="5">
+                            <img src="img/benefits1.png" alt="" class="benefits__img-item" data-item="6">
+                            <div class="benefits__img-line"></div>
+                            <div class="benefits__img-line-move"></div>
                         </div>
                     </div>
                 </div>
+                <div class="benefits__group">
+                    <div class="benefits__nav">
+                        <img src="img/up.svg" alt="" class="benefits__nav-next">
+                        <img src="img/down.svg" alt="" class="benefits__nav-prev">
+                </div>
+                <div class="benefits__indicator">
+                    <div class="benefits__indicator-item" style="background: #131c19;" data-visible="1"></div>
+                    <div class="benefits__indicator-item" style="background: #1e2e27;" data-visible="2"></div>
+                    <div class="benefits__indicator-item" style="background: #284132;" data-visible="3"></div>
+                    <div class="benefits__indicator-item" style="background: #335440;" data-visible="4"></div>
+                    <div class="benefits__indicator-item" style="background: #49795a;" data-visible="5"></div>
+                    <div class="benefits__indicator-item" style="background: #76c48d;" data-visible="6"></div>
+                </div>
+                </div>
             </div>
-            <div class="slide">
+            <!-- </div> -->
+            <!-- <div class="slide">
                 <div class="container">
                     <div class="benefits__wrapper ">
                         <div class="benefits__left">
@@ -541,16 +616,126 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="offers section" id="section3">
             <div class="container">
                 <div class="offers__block">
-                    <img src="img/offers-title.png" alt="" class="offers__title">
-                    <img src="img/offers-subtitle.png" class="offers__subtitle">
+                    <!-- <img src="img/offers-title.png" alt="" class="offers__title"> -->
+                    <img src="img/offers-title.svg" alt="" class="offers__title">
+                    <h2 class="offers__subtitle" id="offers1"></h2>
+                </div>
+                <div id="offers-strings1">
+                    <span>YOU CAN START NOW WITH</span>
                 </div>
                 <div class="offers__wrapper">
+                    <div class="offers__numbers-gorup">
+                        <div class="offers__numbers-gorup-left">
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <br>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <br>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                        </div>
+                        <div class="offers__numbers-gorup-right">
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <br>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <br>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>
+                            <code>0</code>&nbsp;
+                        </div>
+                    </div>
                     <div class="offers__numbers">
                         <code>0</code>
                         <code>0</code>
@@ -693,11 +878,17 @@
         <section class="manager section" id="section4">
             <div class="container">
                 <img src="img/manager-title.png" alt="" class="manager__title">
-                <h2 class="manager__subtitle">CHOOSE YOUR MANAGER</h2>
+                <h2 class="manager__subtitle" id="manager1"></h2>
+                <div id="manager-strings1">
+                    <span>CHOOSE YOUR MANAGER</span>
+                </div>
+                <div id="manager-strings2">
+                    <span>fraud control - contact us via secure channels</span>
+                </div>
                 <div class="manager__wrapper">
                     <div class="manager__item">
                         <div class="manager__top">
-                            <img src="" alt="" class="manager__qr">
+                            <img src="img/qr.svg" alt="" class="manager__qr">
                             <span>MANAGER BIO</span>
                         </div>
                         <div class="manager__bottom">
@@ -735,7 +926,7 @@
                     </div>
                     <div class="manager__item">
                         <div class="manager__top">
-                            <img src="" alt="" class="manager__qr">
+                            <img src="img/qr.svg" alt="" class="manager__qr">
                             <span>MANAGER BIO</span>
                         </div>
                         <div class="manager__bottom">
@@ -773,7 +964,7 @@
                     </div>
                     <div class="manager__item">
                         <div class="manager__top">
-                            <img src="" alt="" class="manager__qr">
+                            <img src="img/qr.svg" alt="" class="manager__qr">
                             <span>MANAGER BIO</span>
                         </div>
                         <div class="manager__bottom">
@@ -810,7 +1001,7 @@
                         <p class="manager__status">ONLINE</p>
                     </div>
                 </div>
-                <h3 class="manager__control">fraud control - contact us via secure channels </h3>
+                <h3 class="manager__control" id="manager2"></h3>
             </div>
         </section>
 
@@ -819,11 +1010,13 @@
                 <h2 class="info__title">
                     BREAKING NEWS
                 </h2>
-                <h3 class="info__subtitle">
-                    &gt; EVERYTHING YOU NEED TO KNOW ABOUT US &lt;
-                </h3>
+                <h3 class="info__subtitle" id="info1"></h3>
+                <div id="info-strings1">
+                    <span>&gt; EVERYTHING YOU NEED TO KNOW ABOUT US &lt;</span>
+                </div>
                 <div class="info__wrapper">
                     <div class="info__item">
+                        <div class="info__item-line"></div>
                         <div class="info__angle-top"></div>
                         <div class="info__angle-bottom"></div>
                         <div class="info__lock">
@@ -838,6 +1031,7 @@
                         <a href="#" class="info__detail">+</a>
                     </div>
                     <div class="info__item">
+                        <div class="info__item-line"></div>
                         <div class="info__angle-top"></div>
                         <div class="info__angle-bottom"></div>
                         <div class="info__lock">
@@ -852,6 +1046,7 @@
                         <a href="#" class="info__detail">+</a>
                     </div>
                     <div class="info__item">
+                        <div class="info__item-line"></div>
                         <div class="info__angle-top"></div>
                         <div class="info__angle-bottom"></div>
                         <div class="info__lock">
@@ -866,6 +1061,7 @@
                         <a href="#" class="info__detail">+</a>
                     </div>
                     <div class="info__item">
+                        <div class="info__item-line"></div>
                         <div class="info__angle-top"></div>
                         <div class="info__angle-bottom"></div>
                         <div class="info__lock">
@@ -880,6 +1076,7 @@
                         <a href="#" class="info__detail">+</a>
                     </div>
                     <div class="info__item">
+                        <div class="info__item-line"></div>
                         <div class="info__angle-top"></div>
                         <div class="info__angle-bottom"></div>
                         <div class="info__lock">
@@ -897,57 +1094,73 @@
                 <a href="news.html" class="news__link">
                     <div></div><span>ALL NEWS</span>
                 </a>
-                <!-- <div class="cooperation ">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">ADVERTIZERS</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Terms and conditins</a></li>
-                            <li><a href="#">Private POLICY</a></li>
-                        </ul>
-                    </nav>
-                    <div class="container">
-                        <div class="cooperation__code">
-                            &lt;!-- HTML4 --&gt; <br>
-                            &lt;script type="text/javascript" src="javascript.js"&gt; &lt;/script&gt;<br> <br>
-                            &lt;!-- HTML5 --&gt;<br>
-                            &lt;script&gt; src="javascript.js"&gt;&lt;/script&gt;<br>
-                            &lt;!-- HTML4 --&gt;<br>
-                            &lt;script&gt; type="text/javascript" src="javascript.js"&gt;&lt;/script&gt;<br><br>
-                            &lt;!-- HTML5 --&gt;<br>
-                            &lt;script&gt; src="javascript.js"&gt;&lt;/script&gt;
-                        </div>
-                        <img src="img/cooperation-title.png" alt="" class="cooperation__title">
-                        <img src="img/partners.png" alt="" class="cooperation__partners">
-                        <img src="img/partners.png" alt="" class="cooperation__partners">
-                        <img src="img/partners.png" alt="" class="cooperation__partners">
-                        <img src="img/partners.png" alt="" class="cooperation__partners">
-                        <p class="cooperation__text">
-                            DON`T HOLD - LET`S TALK!
-                        </p>
-                        <div class="cooperation__socials">
-                            <a href="#">
-                                <img src="img/tg.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="img/fb.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="img/in.svg" alt="">
-                            </a>
-                        </div>
-                        <a href="terms.html" class="cooperation__logo">
-                            <img src="img/logo.svg" alt="">
-                        </a>
-                        <p class="cooperation__rights">
-                            SCAMCOIN NETWORK 2022 <br>
-                            ALL RIGHTS RESERVED
-                        </p>
-                    </div>
-                </div> -->
             </div>
         </section>
+
+        <footer class="footer section" id="section6">
+            <div class="container">
+                <div class="cooperation ">
+                    <div class="container">
+                        <img src="img/cooperation-title.png" alt="" class="cooperation__title">
+                        <div class="footer__block">
+                            <div class="footer__block-cover">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                            </div>
+                            <div class="footer__block-cover">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                                <img src="img/partner.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer__wrapper">
+                            <div class="footer__item">
+                                <a href="terms.html" class="cooperation__logo">
+                                    <img src="img/logo.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="footer__item">
+                                <p class="cooperation__text" id="footer1"></p>
+                                <div id="footer-strings1">
+                                    <span>DON`T HOLD - LET`S TALK!</span>
+                                </div>
+                                <div class="cooperation__socials">
+                                    <a href="#">
+                                        <img src="img/tg.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/fb.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/in.svg" alt="">
+                                    </a>
+                                </div>
+                                <p class="cooperation__rights">
+                                    SCAMCOIN NETWORK 2022 <br>
+                                    ALL RIGHTS RESERVED
+                                </p>
+                            </div>
+                            <div class="footer__item">
+                                <nav>
+                                    <ul>
+                                        <li><a href="#">Terms and conditins</a></li>
+                                        <li><a href="#">Private POLICY</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <nav class="nav" id="menu">
             <div class="nav__item active" data-menuanchor="firstPage">
@@ -958,7 +1171,7 @@
             <div class="nav__item" data-menuanchor="4thpage"><a href="#4thpage"></a></div>
             <div class="nav__item" data-menuanchor="5thpage"><a href="#5thpage"></a></div>
             <div class="nav__item" data-menuanchor="6thpage"><a href="#6thpage"></a></div>
-            <!-- <div class="nav__item" data-menuanchor="7thpage"><a href="#7thpage"></a></div> -->
+            <div class="nav__item" data-menuanchor="7thpage"><a href="#7thpage"></a></div>
         </nav>
 
         <div class="registration">
@@ -974,7 +1187,6 @@
                     <div class="registration__bg-left">
                         <div class="popup__top">ROOT KIT</div>
                         <div class="popup__content">
-                            <img src="img/circles.png" alt="" class="popup__circles">
                             <div id="root0"></div>
                             <div id="root1"></div>
                             <div id="root2"></div>
@@ -1029,7 +1241,6 @@
                     <div class="registration__bg-right">
                         <div class="popup__top">DATA CASH</div>
                         <div class="popup__content">
-                            <img src="img/circles.png" alt="" class="popup__circles">
                             <div id="cash1"></div>
                             <div id="cash2"></div>
                             <div id="cash3"></div>
@@ -1083,7 +1294,7 @@
                             placeholder="HOW DID YOU HEAR ABOUT US?"></textarea>
                         <div class="registration__center">
                             <div>
-                                <input type="radio" id="test1" name="radio-group" checked>
+                                <input type="radio" id="test1" name="radio-group">
                                 <label for="test1"><img src="img/cross.svg" alt=""> <span>I am web</span></label>
                             </div>
                             <div>

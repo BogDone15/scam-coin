@@ -2218,6 +2218,10 @@ body {
     position: relative;
   }
 
+  &__img {
+    display: none;
+  }
+
   &-side {
     position: absolute;
     right: 5rem;

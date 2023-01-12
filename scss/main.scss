@@ -3136,6 +3136,13 @@ body {
   }
 
   &__item {
+    &:first-child {
+    &>a {
+      &>img {
+        width: 100%;
+       }
+    }
+    }
     nav {
       position: unset;
       right: unset;

@@ -49,6 +49,33 @@
                 </div>
             </div>
         </div>
+        <div class="header__wrapper-mob">
+            <div class="header__wrapper-mob-bottom">
+                <a href="index.html">
+                    <div class="active"></div><span>AFFILIATES</span>
+                </a>
+                <a href="advertizers.html">
+                    <div></div><span>ADVERTIZERS</span>
+                </a>
+                <a href="#">
+                    <div></div><span>LOG IN</span>
+                </a>
+            </div>
+            <div class="header__wrapper-mob-top">
+                <div class="header__wrapper-mob-left">
+                    <p>Always online</p>
+                </div>
+                <div class="header__wrapper-mob-center">
+                    <img src="img/header-icon-tg.svg" alt="">
+                    <img src="img/header-icon-in.svg" alt="">
+                    <img src="img/header-icon-fb.svg" alt="">
+                </div>
+                <div class="header__wrapper-mob-right">
+                    <img src="img/icon2.svg" alt="" class="menu__open">
+                    <img src="img/icon3.svg" alt="" class="menu__close">
+                </div>
+            </div>
+        </div>
     </header>
 
     <section class="news">
@@ -174,13 +201,15 @@
                 <a href="#" class="btn">
                     <div class="btn__element-top"></div>
                     <div class="btn__element-bottom"></div>
-                    <img src="img/btn1.png" alt="">
+                    <img src="img/btn1.svg" alt="" class="main__btns-normal">
+                    <img src="img/btn2.svg" alt="" class="main__btns-hover">
                     <span>CLICK</span>
                 </a>
-                <a href="#" class="btn">
+                <a href="#" class="btn reg-btn">
                     <div class="btn__element-top"></div>
                     <div class="btn__element-bottom"></div>
-                    <img src="img/btn2.png" alt="">
+                    <img src="img/btn1.svg" alt="" class="main__btns-normal">
+                    <img src="img/btn2.svg" alt="" class="main__btns-hover">
                     <span>CLICK</span>
                 </a>
             </div>
@@ -207,8 +236,8 @@
                             <img src="img/in.svg" alt="">
                         </a>
                     </div>
-                    <p class="cooperation__rights">
-                        SCAMCOIN NETWORK 2022 <br>
+                    <p class="cooperation__rights cooperation__rights-desk">
+                        SCAMCOIN NETWORK 2023 <br>
                         ALL RIGHTS RESERVED
                     </p>
                 </div>
@@ -222,8 +251,30 @@
                     </nav>
                 </div>
             </div>
+            <p class="cooperation__rights cooperation__rights-mob">
+                SCAMCOIN NETWORK 2023 <br>
+                ALL RIGHTS RESERVED
+              </p>
         </div>
     </section>
+
+    <script>
+            const menuOpen = document.querySelector('.menu__open');
+  const menuClose = document.querySelector('.menu__close');
+  const menuTop = document.querySelector('.header__wrapper-mob-top');
+  const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
+
+  menuOpen.addEventListener('click', () => {
+    menuBottom.classList.add('show-item');
+    menuTop.classList.add('menu-open');
+  });
+
+  menuClose.addEventListener('click', () => {
+    menuBottom.classList.remove('show-item');
+    menuTop.classList.remove('menu-open');
+  });
+
+    </script>
 </body>
 
 </html>

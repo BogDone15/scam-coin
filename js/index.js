@@ -1,13 +1,100 @@
-// window.onload = function () {};
-
 $(document).ready(function () {
   let repeatReg = true;
   let repeatPopup = true;
   let repeatSecondSection = true;
+  let repeatThirdSection = true;
   let repeatFourthSection = true;
   let repeatFifthSection = true;
   let repeatSixthSection = true;
   let repeatSeventhSection = true;
+
+  //START
+
+  if (window.matchMedia('(max-width: 899px)').matches) {
+    var typed = new Typed('#benefits1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 100, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#footer1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#footer-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#offers1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#offers-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#cash11', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#cash-strings11', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#cash12', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#cash-strings12', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#manager1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#manager-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+
+    var typed = new Typed('#manager2', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#manager-strings2', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+    var typed = new Typed('#info1', {
+      // Тут id того блока, в которм будет анимация
+      stringsElement: '#info-strings1', // Тут id блока из которого берем строки для анимации
+      typeSpeed: 80, // Скорость печати
+      startDelay: 500, // Задержка перед стартом анимации
+      backSpeed: 50, // Скорость удаления
+      showCursor: false,
+      loop: false, // Указываем, повторять ли анимацию
+    });
+
+    setTimeout(() => {
+      garantBg.classList.add('full-width');
+      garantSqr.classList.add('show-sqr');
+      garantItem.forEach((item) => {
+        item.classList.add('show-item');
+      });
+    }, 1000);
+  }
+
+  //END
 
   const garantBg = document.querySelector('.garant__bg');
   const garantItem = document.querySelectorAll('.garant__item');
@@ -16,7 +103,7 @@ $(document).ready(function () {
   var slideIndexS = 0,
     sliding = false;
 
-  if ($('#fullpage')) {
+  if (window.matchMedia('(min-width: 900px)').matches) {
     $('#fullpage').fullpage({
       anchors: [
         'firstPage',
@@ -53,7 +140,7 @@ $(document).ready(function () {
             var typed = new Typed('#cash12', {
               // Тут id того блока, в которм будет анимация
               stringsElement: '#cash-strings12', // Тут id блока из которого берем строки для анимации
-              typeSpeed: 40, // Скорость печати
+              typeSpeed: 80, // Скорость печати
               startDelay: 500, // Задержка перед стартом анимации
               backSpeed: 50, // Скорость удаления
               showCursor: false,
@@ -76,15 +163,18 @@ $(document).ready(function () {
           document.querySelector('#header').classList.remove('show-header');
         }
         if (origin.index === 1 && slideIndexS === 0) {
-          var typed = new Typed('#benefits1', {
-            // Тут id того блока, в которм будет анимация
-            stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 10, // Скорость печати
-            startDelay: 100, // Задержка перед стартом анимации
-            backSpeed: 50, // Скорость удаления
-            showCursor: false,
-            loop: false, // Указываем, повторять ли анимацию
-          });
+          if (repeatThirdSection) {
+            repeatThirdSection = false;
+            var typed = new Typed('#benefits1', {
+              // Тут id того блока, в которм будет анимация
+              stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
+              typeSpeed: 80, // Скорость печати
+              startDelay: 100, // Задержка перед стартом анимации
+              backSpeed: 50, // Скорость удаления
+              showCursor: false,
+              loop: false, // Указываем, повторять ли анимацию
+            });
+          }
         }
         if (origin.index === 2 && slideIndexS === 0) {
           if (repeatFourthSection) {
@@ -116,7 +206,7 @@ $(document).ready(function () {
             var typed = new Typed('#manager2', {
               // Тут id того блока, в которм будет анимация
               stringsElement: '#manager-strings2', // Тут id блока из которого берем строки для анимации
-              typeSpeed: 40, // Скорость печати
+              typeSpeed: 80, // Скорость печати
               startDelay: 500, // Задержка перед стартом анимации
               backSpeed: 50, // Скорость удаления
               showCursor: false,
@@ -130,7 +220,7 @@ $(document).ready(function () {
             var typed = new Typed('#info1', {
               // Тут id того блока, в которм будет анимация
               stringsElement: '#info-strings1', // Тут id блока из которого берем строки для анимации
-              typeSpeed: 55, // Скорость печати
+              typeSpeed: 80, // Скорость печати
               startDelay: 500, // Задержка перед стартом анимации
               backSpeed: 50, // Скорость удаления
               showCursor: false,
@@ -144,7 +234,7 @@ $(document).ready(function () {
             var typed = new Typed('#footer1', {
               // Тут id того блока, в которм будет анимация
               stringsElement: '#footer-strings1', // Тут id блока из которого берем строки для анимации
-              typeSpeed: 55, // Скорость печати
+              typeSpeed: 80, // Скорость печати
               startDelay: 500, // Задержка перед стартом анимации
               backSpeed: 50, // Скорость удаления
               showCursor: false,
@@ -166,6 +256,116 @@ $(document).ready(function () {
       },
     });
   }
+
+  document.querySelector('.secondPage').addEventListener('click', () => {
+    if (repeatSecondSection) {
+      repeatSecondSection = false;
+
+      var typed = new Typed('#cash11', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#cash-strings11', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+      var typed = new Typed('#cash12', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#cash-strings12', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
+
+  document.querySelector('.thirdPage').addEventListener('click', () => {
+    if (repeatThirdSection) {
+      repeatThirdSection = false;
+      var typed = new Typed('#benefits1', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 100, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
+
+  document.querySelector('.fourthPage').addEventListener('click', () => {
+    if (repeatFourthSection) {
+      repeatFourthSection = false;
+      var typed = new Typed('#offers1', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#offers-strings1', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
+
+  document.querySelector('.fifthPage').addEventListener('click', () => {
+    if (repeatFifthSection) {
+      repeatFifthSection = false;
+      var typed = new Typed('#manager1', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#manager-strings1', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+
+      var typed = new Typed('#manager2', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#manager-strings2', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
+
+  document.querySelector('.sixthPage').addEventListener('click', () => {
+    if (repeatSixthSection) {
+      repeatSixthSection = false;
+      var typed = new Typed('#info1', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#info-strings1', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
+
+  document.querySelector('.seventhPage').addEventListener('click', () => {
+    if (repeatSeventhSection) {
+      repeatSeventhSection = false;
+      var typed = new Typed('#footer1', {
+        // Тут id того блока, в которм будет анимация
+        stringsElement: '#footer-strings1', // Тут id блока из которого берем строки для анимации
+        typeSpeed: 80, // Скорость печати
+        startDelay: 500, // Задержка перед стартом анимации
+        backSpeed: 50, // Скорость удаления
+        showCursor: false,
+        loop: false, // Указываем, повторять ли анимацию
+      });
+    }
+  });
 
   if ($('.offers__move')) {
     $('.offers__move').marquee({
@@ -204,7 +404,7 @@ $(document).ready(function () {
   var typed = new Typed('#coin2', {
     // Тут id того блока, в которм будет анимация
     stringsElement: '#coin-strings2', // Тут id блока из которого берем строки для анимации
-    typeSpeed: 40, // Скорость печати
+    typeSpeed: 80, // Скорость печати
     startDelay: 500, // Задержка перед стартом анимации
     backSpeed: 50, // Скорость удаления
     showCursor: false,
@@ -571,6 +771,12 @@ $(document).ready(function () {
 
   let itemPos = 1;
 
+  let repeatSeconditemPos = true;
+  let repeatThirditemPos = true;
+  let repeatFourthitemPos = true;
+  let repeatFifthitemPos = true;
+  let repeatSixthitemPos = true;
+
   document.querySelectorAll(`[data-item="1"]`).forEach((item) => {
     item.style.display = 'block';
   });
@@ -611,28 +817,78 @@ $(document).ready(function () {
       itemPos++;
 
       if (itemPos == 2) {
-        var typed = new Typed('#benefits2', {
-          // Тут id того блока, в которм будет анимация
-          stringsElement: '#benefits-strings2', // Тут id блока из которого берем строки для анимации
-          typeSpeed: 10, // Скорость печати
-          startDelay: 100, // Задержка перед стартом анимации
-          backSpeed: 50, // Скорость удаления
-          showCursor: false,
-          loop: false, // Указываем, повторять ли анимацию
-        });
+        if (repeatSeconditemPos) {
+          repeatSeconditemPos = false;
+          var typed = new Typed('#benefits2', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings2', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
       }
 
       if (itemPos == 3) {
-        console.log(itemPos);
-        var typed = new Typed('#benefits3', {
-          // Тут id того блока, в которм будет анимация
-          stringsElement: '#benefits-strings3', // Тут id блока из которого берем строки для анимации
-          typeSpeed: 10, // Скорость печати
-          startDelay: 100, // Задержка перед стартом анимации
-          backSpeed: 50, // Скорость удаления
-          showCursor: false,
-          loop: false, // Указываем, повторять ли анимацию
-        });
+        if (repeatThirditemPos) {
+          repeatThirditemPos = false;
+          var typed = new Typed('#benefits3', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings3', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (itemPos == 4) {
+        if (repeatFourthitemPos) {
+          repeatFourthitemPos = false;
+          var typed = new Typed('#benefits4', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings4', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (itemPos == 5) {
+        if (repeatFifthitemPos) {
+          repeatFifthitemPos = false;
+          var typed = new Typed('#benefits5', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings5', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (itemPos == 6) {
+        if (repeatSixthitemPos) {
+          repeatSixthitemPos = false;
+          var typed = new Typed('#benefits6', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings6', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
       }
 
       benefitsPos.textContent = itemPos;
@@ -668,4 +924,41 @@ $(document).ready(function () {
 
   benefitsNavPrev.addEventListener('click', showNextItem);
   benefitsNavNext.addEventListener('click', showPrevItem);
+
+  const menuOpen = document.querySelector('.menu__open');
+  const menuClose = document.querySelector('.menu__close');
+  const menuTop = document.querySelector('.header__wrapper-mob-top');
+  const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
+
+  menuOpen.addEventListener('click', () => {
+    menuBottom.classList.add('show-item');
+    menuTop.classList.add('menu-open');
+  });
+
+  menuClose.addEventListener('click', () => {
+    menuBottom.classList.remove('show-item');
+    menuTop.classList.remove('menu-open');
+  });
+
+  var swiper = new Swiper('.mySwiper', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true,
+    },
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 20,
+    grabCursor: true,
+  });
+
+  var swiper = new Swiper('.mySwiperOffer', {
+    scrollbar: {
+      el: '.swiper-scrollbar-offer',
+      hide: true,
+    },
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 20,
+    grabCursor: true,
+  });
 });

@@ -54,6 +54,33 @@
         </div>
       </div>
     </div>
+    <div class="header__wrapper-mob">
+      <div class="header__wrapper-mob-bottom">
+          <a href="index.html">
+              <div class="active"></div><span>AFFILIATES</span>
+          </a>
+          <a href="advertizers.html">
+              <div></div><span>ADVERTIZERS</span>
+          </a>
+          <a href="#">
+              <div></div><span>LOG IN</span>
+          </a>
+      </div>
+      <div class="header__wrapper-mob-top">
+          <div class="header__wrapper-mob-left">
+              <p>Always online</p>
+          </div>
+          <div class="header__wrapper-mob-center">
+              <img src="img/header-icon-tg.svg" alt="">
+              <img src="img/header-icon-in.svg" alt="">
+              <img src="img/header-icon-fb.svg" alt="">
+          </div>
+          <div class="header__wrapper-mob-right">
+              <img src="img/icon2.svg" alt="" class="menu__open">
+              <img src="img/icon3.svg" alt="" class="menu__close">
+          </div>
+      </div>
+  </div>
   </header>
 
 
@@ -145,6 +172,7 @@
               <img data-pos="6" src="img/advertisers-img1.png" alt="" class="advertisers__img">
             </div>
             <div class="advertisers__right-bottom">
+              <div class="advertisers__right-bottom-component"></div>
               <span id="currentPos">1 </span> /6
             </div>
           </div>
@@ -165,26 +193,30 @@
         <p class="leads__text">
           Fill out simple form and we will do everything ourselves
         </p>
-        <form action="" class="leads__form">
+        <form action="" class="leads__form" method="post" id="reg">
           <div class="leads__wrapper">
-            <div>
-              <input type="text" class="leads__input" placeholder="YOUR NAME">
+            <div class="leads__cover">
+              <div class="leads__add-input"></div>
               <div class="leads__focus"></div>
+              <input type="text" name="name" id="name" class="leads__input" placeholder="YOUR NAME">
             </div>
-            <div><input type="text" class="leads__input" placeholder="YOUR EMAIL OR TELEGRAM">
+            <div class="leads__cover">
+              <div class="leads__add-input"></div>
               <div class="leads__focus"></div>
+              <input type="email" name="email" id="email" class="leads__input" placeholder="YOUR EMAIL OR TELEGRAM">
             </div>
           </div>
           <div class="leads__textarea">
             <div class="leads__add"></div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="YOUR MASSAGE"></textarea>
             <div class="leads__focus"></div>
+            <textarea name="textarea" id="" cols="30" rows="10" placeholder="YOUR MASSAGE"></textarea>
           </div>
           <div class="leads__btn">
             <button type="submit">
               <div class="leads__btn-element-top"></div>
               <div class="leads__btn-element-bottom"></div>
-              <img src="img/register-btn.png" alt="">
+              <img src="img/registration1.svg" alt="" class="leads__btn-normal">
+              <img src="img/registration2.svg" alt="" class="leads__btn-hover">
               <span>become a partner</span>
             </button>
             <a href="#" class="leads__icon">
@@ -217,8 +249,8 @@
               <img src="img/in.svg" alt="">
             </a>
           </div>
-          <p class="cooperation__rights">
-            SCAMCOIN NETWORK 2022 <br>
+          <p class="cooperation__rights cooperation__rights-desk">
+            SCAMCOIN NETWORK 2023 <br>
             ALL RIGHTS RESERVED
           </p>
         </div>
@@ -232,6 +264,10 @@
           </nav>
         </div>
       </div>
+      <p class="cooperation__rights cooperation__rights-mob">
+        SCAMCOIN NETWORK 2023 <br>
+        ALL RIGHTS RESERVED
+      </p>
     </div>
 
     <!-- <div class="cooperation">
@@ -262,14 +298,16 @@
         <img src="img/logo.svg" alt="">
       </a>
       <p class="cooperation__rights">
-        SCAMCOIN NETWORK 2022 <br>
+        SCAMCOIN NETWORK 2023 <br>
         ALL RIGHTS RESERVED
       </p>
     </div> -->
   </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/typed.js"></script>
+  <script src="js/form.js"></script>
 
   <script>
     const textarea = document.querySelector('textarea')
@@ -279,16 +317,15 @@
     if (leadsInput) {
 
       leadsInput.forEach(item => {
-
         item.addEventListener('focus', (e) => {
-          e.target.nextElementSibling.style.display = 'none'
+          e.target.previousElementSibling.style.display = 'none'
         })
       })
     }
 
     if (textarea) {
       textarea.addEventListener('focus', (e) => {
-        e.target.nextElementSibling.style.display = 'none'
+        e.target.previousElementSibling.style.display = 'none'
       })
     }
 
@@ -378,6 +415,22 @@
     setTimeout(() => {
       advertisersRightBottom.classList.add('scale')
     }, 1800);
+
+    const menuOpen = document.querySelector('.menu__open');
+  const menuClose = document.querySelector('.menu__close');
+  const menuTop = document.querySelector('.header__wrapper-mob-top');
+  const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
+
+  menuOpen.addEventListener('click', () => {
+    menuBottom.classList.add('show-item');
+    menuTop.classList.add('menu-open');
+  });
+
+  menuClose.addEventListener('click', () => {
+    menuBottom.classList.remove('show-item');
+    menuTop.classList.remove('menu-open');
+  });
+
   </script>
 
 </body>

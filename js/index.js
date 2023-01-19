@@ -764,7 +764,7 @@ $(document).ready(function () {
 
   tick();
 
-  const benefitsPos = document.querySelector('.benefits__pos');
+  const benefitsPos = document.querySelectorAll('.benefits__pos');
   const benefitsNavPrev = document.querySelector('.benefits__nav-prev');
   const benefitsNavNext = document.querySelector('.benefits__nav-next');
   const moveLine = document.querySelector('.benefits__img-line-move');
@@ -891,7 +891,9 @@ $(document).ready(function () {
         }
       }
 
-      benefitsPos.textContent = itemPos;
+      benefitsPos.forEach((item) => {
+        item.textContent = itemPos;
+      });
     }
   };
 

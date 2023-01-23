@@ -69,7 +69,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits1', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,
@@ -241,7 +241,7 @@ $(document).ready(function () {
             var typed = new Typed('#benefits1', {
               // Тут id того блока, в которм будет анимация
               stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
-              typeSpeed: 5, // Скорость печати
+              typeSpeed: 1, // Скорость печати
               startDelay: 100, // Задержка перед стартом анимации
               backSpeed: 50, // Скорость удаления
               showCursor: false,
@@ -350,7 +350,7 @@ $(document).ready(function () {
       var typed = new Typed('#benefits1', {
         // Тут id того блока, в которм будет анимация
         stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
-        typeSpeed: 5, // Скорость печати
+        typeSpeed: 1, // Скорость печати
         startDelay: 100, // Задержка перед стартом анимации
         backSpeed: 50, // Скорость удаления
         showCursor: false,
@@ -884,7 +884,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits2', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings2', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,
@@ -901,7 +901,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits3', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings3', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,
@@ -918,7 +918,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits4', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings4', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,
@@ -935,7 +935,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits5', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings5', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,
@@ -952,7 +952,7 @@ $(document).ready(function () {
           var typed = new Typed('#benefits6', {
             // Тут id того блока, в которм будет анимация
             stringsElement: '#benefits-strings6', // Тут id блока из которого берем строки для анимации
-            typeSpeed: 5, // Скорость печати
+            typeSpeed: 1, // Скорость печати
             startDelay: 100, // Задержка перед стартом анимации
             backSpeed: 50, // Скорость удаления
             showCursor: false,

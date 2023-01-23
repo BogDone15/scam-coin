@@ -3025,6 +3025,7 @@ body {
     &::placeholder {
       text-align: right;
       padding-right: 1rem;
+      transform: translateY(.3rem);
       color: #c6c6c6;
       font-size: 1.4rem;
     }

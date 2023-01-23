@@ -4139,6 +4139,71 @@ label.error {
     }
   }
 
+  .main__btns .btn {
+    &::before,
+    &::after {
+      border-left: 6px solid #fff;
+      border-right: 6px solid #fff;
+      height: 2px;
+      left: 1.4rem;
+    }
+    &__element-top,
+    &__element-bottom {
+      height: 6px;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+      left: 1.4rem;
+    }
+  }
+  .leads__btn>button {
+    &::before,
+    &::after {
+      border-left: 6px solid #fff;
+      border-right: 6px solid #fff;
+      height: 2px;
+      left: 1.2rem;
+    }
+    &::before {
+      top: 1.1rem;
+    }
+  }
+  .benefits__cover {
+    &::before,
+    &::after {
+      border-left: 6px solid #fff;
+      border-right: 6px solid #fff;
+      height: 2px;
+      left: 1.2rem;
+    }
+    &::before {
+      top: 1.1rem;
+    }
+  }
+
+  .registration button {
+    &::before,
+    &::after {
+      border-left: 6px solid #fff;
+      border-right: 6px solid #fff;
+      height: 2px;
+      left: 1.2rem;
+    }
+    &::before {
+      top: 1.1rem;
+    }
+  }
+
+  .leads__btn {
+    &-element-top,
+    &-element-bottom {
+      height: 6px;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+      left: 1.2rem;
+    }
+  }
+
+
   .offers {
 
     &__mountain-pad {
@@ -4379,7 +4444,7 @@ label.error {
 
       &-mob {
         display: block !important;
-        height: 14rem;
+        height: 13rem;
         width: 64rem;
 
         &>span {

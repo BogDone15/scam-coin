@@ -223,6 +223,10 @@ body {
   padding: 2rem 1rem;
   transition: all .2s ease;
 
+  &-tab {
+    display: none;
+  }
+
   &__block {
     display: flex;
     align-items: center;
@@ -304,9 +308,6 @@ body {
   &__img {
     max-width: 79.2rem;
     width: 100%;
-    &>img {
-      width: 100%;
-    }
   }
 
   .container {
@@ -2613,8 +2614,6 @@ body {
   }
 }
 
-
-
 .advertisers {
   padding-top: 8rem;
 
@@ -2791,7 +2790,7 @@ body {
           font-size: 2.9rem;
           text-transform: uppercase;
           font-weight: 100;
-          max-width: 53rem;
+          max-width: 80rem;
           width: 100%;
           margin-top: 3rem;
           margin-left: 2rem;
@@ -3818,7 +3817,11 @@ label.error {
 
 @media screen and (max-width: 900px) {
   #fullpage {
-    background: url('../img/bg-pad-first.jpg') center/cover no-repeat;
+    background: url('../img/bg-pad-first.jpg') 100% 100%/cover no-repeat;
+  }
+
+  .header-tab {
+    display: flex;
   }
 
   .main,
@@ -3827,12 +3830,16 @@ label.error {
   .offers,
   .manager,
   .info {
-    margin-top: 7rem;
+    margin-top: 12rem;
     background: unset;
   }
 
   .main {
     margin-top: 0;
+  }
+
+  .garant__sqr {
+    display: none;
   }
 
   .benefits {
@@ -3875,6 +3882,19 @@ label.error {
     &__item {
       height: 37.4rem;
       width: 37.4rem;
+    }
+  }
+
+  .offers {
+    position: relative;
+    &__mountain-pad {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: -6rem;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
   }
 }
@@ -4117,6 +4137,20 @@ label.error {
   }
 
   .offers {
+
+    &__mountain-pad {
+      display: none;
+    }
+
+    &__mountain-mob {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: -8rem;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
 
     &__slider {
       &-desk {
@@ -4786,7 +4820,7 @@ label.error {
 
     &__wrapper {
       position: relative;
-      height: 90rem;
+      height: 96rem;
       gap: unset;
     }
 
@@ -4825,7 +4859,7 @@ label.error {
         }
 
         &-cover {
-          height: 81rem;
+          height: 87rem;
           padding-top: 12rem;
         }
 

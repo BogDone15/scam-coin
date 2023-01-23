@@ -458,7 +458,7 @@ $(document).ready(function () {
     // Тут id того блока, в которм будет анимация
     stringsElement: '#coin-strings1', // Тут id блока из которого берем строки для анимации
     typeSpeed: 80, // Скорость печати
-    startDelay: 500, // Задержка перед стартом анимации
+    startDelay: 1500, // Задержка перед стартом анимации
     backSpeed: 50, // Скорость удаления
     showCursor: false,
     loop: false, // Указываем, повторять ли анимацию
@@ -466,17 +466,8 @@ $(document).ready(function () {
   var typed = new Typed('#coin2', {
     // Тут id того блока, в которм будет анимация
     stringsElement: '#coin-strings2', // Тут id блока из которого берем строки для анимации
-    typeSpeed: 80, // Скорость печати
-    startDelay: 500, // Задержка перед стартом анимации
-    backSpeed: 50, // Скорость удаления
-    showCursor: false,
-    loop: false, // Указываем, повторять ли анимацию
-  });
-  var typed = new Typed('#coin3', {
-    // Тут id того блока, в которм будет анимация
-    stringsElement: '#coin-strings3', // Тут id блока из которого берем строки для анимации
-    typeSpeed: 80, // Скорость печати
-    startDelay: 500, // Задержка перед стартом анимации
+    typeSpeed: 50, // Скорость печати
+    startDelay: 1500, // Задержка перед стартом анимации
     backSpeed: 50, // Скорость удаления
     showCursor: false,
     loop: false, // Указываем, повторять ли анимацию

@@ -195,26 +195,6 @@ body {
   padding: 0 10px;
 }
 
-// @media (max-width: 1199px) {
-//   .container {
-//     max-width: 960px;
-//   }
-// }
-
-// @media (max-width: 991px) {
-//   .container {
-//     max-width: 750px;
-//     padding: 0 20px;
-//   }
-// }
-
-// @media (max-width: 767px) {
-//   .container {
-//     max-width: 100%;
-//     padding: 0 16px;
-//   }
-// }
-
 .logo {
   display: block;
   max-width: 25.7rem;
@@ -1014,6 +994,7 @@ body {
   }
 
   &__mountain {
+
     &-pad,
     &-mob {
       display: none;
@@ -3917,7 +3898,7 @@ label.error {
   .manager {
     margin-top: 20rem;
   }
-  
+
   .advertisers__left-side-top::after {
     right: -0.5rem;
   }
@@ -4015,9 +3996,14 @@ label.error {
           align-items: center;
           gap: 4rem;
 
-          &>img {
+          &>a {
             width: 6rem;
             height: 6rem;
+            cursor: pointer;
+
+            &>img {
+              width: 100%;
+            }
           }
         }
 
@@ -4355,6 +4341,7 @@ label.error {
         display: block !important;
         height: 14rem;
         width: 64rem;
+
         &>span {
           font-size: 3rem;
           bottom: 3rem;
@@ -4670,6 +4657,9 @@ label.error {
 
         &::placeholder {
           font-size: 2.8rem;
+          position: absolute;
+          right: 2rem;
+          bottom: 1rem;
         }
       }
 
@@ -4703,6 +4693,9 @@ label.error {
 
       &::placeholder {
         font-size: 2.8rem;
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
       }
     }
 
@@ -4845,6 +4838,7 @@ label.error {
 
         &-top {
           right: -0.5rem;
+
           &::after {
             right: -.1rem;
           }

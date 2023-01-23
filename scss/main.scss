@@ -2397,8 +2397,9 @@ body {
     input {
       position: relative;
       background: #292b29;
-      border: none;
       outline: none;
+      border: none;
+      border-radius: 0;
       border-bottom: 2px solid #76c48e;
       width: 100%;
       font-size: 1.6rem;
@@ -2411,9 +2412,8 @@ body {
       }
 
       &::placeholder {
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
+        text-align: right;
+        transform: translateY(1rem);
         color: #c6c6c6;
         font-size: 1.4rem;
       }
@@ -2434,9 +2434,8 @@ body {
 
     &::placeholder {
       font-family: 'Rubik', sans-serif;
-      position: absolute;
-      right: 1rem;
-      bottom: 1rem;
+      text-align: right;
+      transform: translateY(13.5rem);
       color: #c6c6c6;
       font-size: 1.4rem;
     }
@@ -3002,11 +3001,11 @@ body {
   }
 
   &__input {
-    position: relative;
     z-index: 3;
     font-family: 'Fira Code', sans-serif;
     background: rgba(41, 43, 41, .8);
     border: none;
+    border-radius: 0;
     outline: none;
     border-right: 2px solid #76c48e;
     border-left: 2px solid #76c48e;
@@ -3017,14 +3016,15 @@ body {
     padding: 1.3rem 1rem 0 3rem;
 
     &.error {
+      position: relative;
+      border-radius: 0;
       border: 2px solid red;
       z-index: 6;
     }
 
     &::placeholder {
-      position: absolute;
-      right: 2rem;
-      bottom: 1rem;
+      text-align: right;
+      padding-right: 1rem;
       color: #c6c6c6;
       font-size: 1.4rem;
     }
@@ -3112,20 +3112,20 @@ body {
       background: rgba(41, 43, 41, .8);
       width: 100%;
       height: 100%;
-      border: none;
       outline: none;
+      border-radius: 0;
       border: 1px solid #76c48e;
       width: 100%;
       font-size: 1.6rem;
-      height: 34rem;
+      height: 38rem;
       color: #c6c6c6;
       padding: 6.6rem 1rem 1rem 3rem;
       resize: none;
 
       &::placeholder {
-        position: absolute;
-        right: 2rem;
-        bottom: 3rem;
+        text-align: right;
+        padding-right: 1.5rem;
+        padding-top: 27rem;
         color: #c6c6c6;
         font-size: 1.4rem;
       }
@@ -3751,11 +3751,8 @@ label.error {
   left: 1rem;
   bottom: -2rem;
   z-index: 4;
-
-  &>span {
-    color: red;
-    font-size: 1.2rem;
-  }
+  color: red;
+  font-size: 1.4rem;
 }
 
 @keyframes move-line {
@@ -3887,6 +3884,7 @@ label.error {
 
   .offers {
     position: relative;
+
     &__mountain-pad {
       position: absolute;
       display: block;
@@ -3936,6 +3934,10 @@ label.error {
 @media screen and (max-width: 580px) {
   #fullpage {
     background: url('../img/bg-mob-first.jpg') center/cover no-repeat;
+  }
+
+  label.error {
+    font-size: 1.7rem;
   }
 
   .container {
@@ -4694,9 +4696,8 @@ label.error {
 
         &::placeholder {
           font-size: 2.8rem;
-          position: absolute;
-          right: 2rem;
-          bottom: 1rem;
+          padding-right: 1rem;
+          padding-top: 24rem;
         }
       }
 
@@ -4714,6 +4715,10 @@ label.error {
       &>div {
         width: 100%;
 
+        &::after {
+          bottom: .1rem;
+        }
+
         .leads__focus {
           height: .9rem;
           width: 5rem;
@@ -4730,9 +4735,7 @@ label.error {
 
       &::placeholder {
         font-size: 2.8rem;
-        position: absolute;
-        right: 2rem;
-        bottom: 1rem;
+        text-align: right;
       }
     }
 

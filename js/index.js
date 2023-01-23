@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  const loaderContainer = document.querySelector('.loader-container');
+  setTimeout(() => {
+    loaderContainer.classList.add('hide-loader');
+  }, 3000);
+
+  if (window.matchMedia('(max-width: 579px)').matches) {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 50) {
+        $('.header').addClass('header-bottom');
+      } else {
+        $('.header').removeClass('header-bottom');
+      }
+    });
+  }
+
   let repeatReg = true;
   let repeatPopup = true;
   let repeatSecondSection = true;
@@ -11,78 +26,117 @@ $(document).ready(function () {
   //START
 
   if (window.matchMedia('(max-width: 899px)').matches) {
-    var typed = new Typed('#benefits1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 100, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#footer1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#footer-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#offers1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#offers-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#cash11', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#cash-strings11', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#cash12', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#cash-strings12', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#manager1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#manager-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
+    const infoSubtitle = $('.info__subtitle');
+    const benefitsText = $('.benefits__title');
+    const offersSubtitle = $('.offers__subtitle');
+    const managerSubtitle = $('.manager__subtitle');
+    const managerControl = $('.manager__control');
+    const cooperationText = $('.cooperation__text');
 
-    var typed = new Typed('#manager2', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#manager-strings2', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-    var typed = new Typed('#info1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#info-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
+    let repeatMobFirst = true;
+    let repeatMobSecond = true;
+    let repeatMobThird = true;
+    let repeatMobFourh = true;
+    let repeatMobFifth = true;
+    let repeatMobSixth = true;
+    $(window).scroll(function () {
+      let scroll = $(window).scrollTop() + $(window).height();
+      let offsetFirst = infoSubtitle.offset().top;
+      let offsetSecond = benefitsText.offset().top;
+      let offsetThird = offersSubtitle.offset().top;
+      let offsetFourth = managerSubtitle.offset().top;
+      let offsetFifth = managerControl.offset().top;
+      let offsetSixth = cooperationText.offset().top;
+
+      if (scroll > offsetFirst) {
+        if (repeatMobFirst) {
+          repeatMobFirst = false;
+          var typed = new Typed('#info1', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#info-strings1', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 500, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (scroll > offsetSecond) {
+        if (repeatMobSecond) {
+          repeatMobSecond = false;
+          var typed = new Typed('#benefits1', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#benefits-strings1', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 100, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (scroll > offsetThird) {
+        if (repeatMobThird) {
+          repeatMobThird = false;
+          var typed = new Typed('#offers1', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#offers-strings1', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 500, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (scroll > offsetFourth) {
+        if (repeatMobFourh) {
+          repeatMobFourh = false;
+          var typed = new Typed('#manager1', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#manager-strings1', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 500, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (scroll > offsetFifth) {
+        if (repeatMobFifth) {
+          repeatMobFifth = false;
+          var typed = new Typed('#manager2', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#manager-strings2', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 500, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
+
+      if (scroll > offsetSixth) {
+        if (repeatMobSixth) {
+          repeatMobSixth = false;
+          var typed = new Typed('#footer1', {
+            // Тут id того блока, в которм будет анимация
+            stringsElement: '#footer-strings1', // Тут id блока из которого берем строки для анимации
+            typeSpeed: 80, // Скорость печати
+            startDelay: 500, // Задержка перед стартом анимации
+            backSpeed: 50, // Скорость удаления
+            showCursor: false,
+            loop: false, // Указываем, повторять ли анимацию
+          });
+        }
+      }
     });
 
     setTimeout(() => {
@@ -106,13 +160,13 @@ $(document).ready(function () {
   if (window.matchMedia('(min-width: 900px)').matches) {
     $('#fullpage').fullpage({
       anchors: [
-        'firstPage',
-        'secondPage',
-        '3rdPage',
-        '4thpage',
-        '5thpage',
-        '6thpage',
-        '7thpage',
+        'home',
+        'steps',
+        'benefits',
+        'fieryoffers',
+        'managers',
+        'news',
+        'partners',
         'lastPage',
       ],
       menu: '#menu',
@@ -242,22 +296,11 @@ $(document).ready(function () {
             });
           }
         }
-        // if (origin.index === 2 && !sliding) {
-        //   if (direction === 'down' && slideIndexS < 6) {
-        //     $.fn.fullpage.moveSlideRight();
-        //     return false;
-        //   } else if (direction === 'up' && slideIndexS > 1) {
-        //     $.fn.fullpage.moveSlideLeft();
-        //     return false;
-        //   }
-        // } else if (sliding) {
-        //   return false;
-        // }
       },
     });
   }
 
-  document.querySelector('.secondPage').addEventListener('click', () => {
+  document.querySelector('.steps-move').addEventListener('click', () => {
     if (repeatSecondSection) {
       repeatSecondSection = false;
 
@@ -282,7 +325,7 @@ $(document).ready(function () {
     }
   });
 
-  document.querySelector('.thirdPage').addEventListener('click', () => {
+  document.querySelector('.benefits-move').addEventListener('click', () => {
     if (repeatThirdSection) {
       repeatThirdSection = false;
       var typed = new Typed('#benefits1', {
@@ -297,7 +340,7 @@ $(document).ready(function () {
     }
   });
 
-  document.querySelector('.fourthPage').addEventListener('click', () => {
+  document.querySelector('.fieryoffers-move').addEventListener('click', () => {
     if (repeatFourthSection) {
       repeatFourthSection = false;
       var typed = new Typed('#offers1', {
@@ -312,7 +355,7 @@ $(document).ready(function () {
     }
   });
 
-  document.querySelector('.fifthPage').addEventListener('click', () => {
+  document.querySelector('.managers-move').addEventListener('click', () => {
     if (repeatFifthSection) {
       repeatFifthSection = false;
       var typed = new Typed('#manager1', {
@@ -337,7 +380,7 @@ $(document).ready(function () {
     }
   });
 
-  document.querySelector('.sixthPage').addEventListener('click', () => {
+  document.querySelector('.news-move').addEventListener('click', () => {
     if (repeatSixthSection) {
       repeatSixthSection = false;
       var typed = new Typed('#info1', {
@@ -352,7 +395,7 @@ $(document).ready(function () {
     }
   });
 
-  document.querySelector('.seventhPage').addEventListener('click', () => {
+  document.querySelector('.partners-move').addEventListener('click', () => {
     if (repeatSeventhSection) {
       repeatSeventhSection = false;
       var typed = new Typed('#footer1', {
@@ -828,6 +871,8 @@ $(document).ready(function () {
             showCursor: false,
             loop: false, // Указываем, повторять ли анимацию
           });
+        } else {
+          document.querySelector('#benefits2').style.display = 'block';
         }
       }
 
@@ -843,6 +888,8 @@ $(document).ready(function () {
             showCursor: false,
             loop: false, // Указываем, повторять ли анимацию
           });
+        } else {
+          document.querySelector('#benefits3').style.display = 'block';
         }
       }
 
@@ -858,6 +905,8 @@ $(document).ready(function () {
             showCursor: false,
             loop: false, // Указываем, повторять ли анимацию
           });
+        } else {
+          document.querySelector('#benefits4').style.display = 'block';
         }
       }
 
@@ -873,6 +922,8 @@ $(document).ready(function () {
             showCursor: false,
             loop: false, // Указываем, повторять ли анимацию
           });
+        } else {
+          document.querySelector('#benefits5').style.display = 'block';
         }
       }
 
@@ -888,6 +939,8 @@ $(document).ready(function () {
             showCursor: false,
             loop: false, // Указываем, повторять ли анимацию
           });
+        } else {
+          document.querySelector('#benefits6').style.display = 'block';
         }
       }
 
@@ -902,6 +955,12 @@ $(document).ready(function () {
       document.querySelectorAll(`[data-item="${itemPos}"]`).forEach((item) => {
         item.style.display = 'none';
       });
+
+      document.querySelector(`[data-benefits="${itemPos}"]`).style.display =
+        'none';
+
+      document.querySelector(`[data-benefits="${itemPos - 1}"]`).style.display =
+        'block';
 
       document
         .querySelectorAll(`[data-item="${itemPos - 1}"]`)
@@ -920,7 +979,9 @@ $(document).ready(function () {
 
       itemPos--;
 
-      benefitsPos.textContent = itemPos;
+      benefitsPos.forEach((item) => {
+        item.textContent = itemPos;
+      });
     }
   };
 
@@ -950,6 +1011,7 @@ $(document).ready(function () {
     slidesPerView: 2,
     centeredSlides: true,
     spaceBetween: 20,
+    loop: true,
     grabCursor: true,
   });
 
@@ -961,6 +1023,18 @@ $(document).ready(function () {
     slidesPerView: 2,
     centeredSlides: true,
     spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+  });
+
+  var swiper = new Swiper('.mySwiperGarant', {
+    scrollbar: {
+      el: '.swiper-scrollbar-garant',
+      hide: true,
+    },
+    slidesPerView: 2,
+    centeredSlides: false,
+    spaceBetween: 30,
     grabCursor: true,
   });
 });

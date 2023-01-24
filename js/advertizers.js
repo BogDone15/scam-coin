@@ -161,8 +161,7 @@ $(document).ready(function () {
         email: '<span>Enter correct email!</span>',
       },
       name: {
-        required:
-          '<span>Enter correct name (min. 6 latin chars)!</span>',
+        required: '<span>Enter correct name (min. 6 latin chars)!</span>',
       },
     },
 
@@ -266,3 +265,94 @@ $(document).ready(function () {
     },
   });
 });
+
+const advertisersContent = $('.advertisers__content');
+const advertisersWin = document.querySelector('.advertisers__win');
+let startAnim = true;
+
+$(window).scroll(function () {
+  let scroll = $(window).scrollTop() + $(window).height();
+  let offsetAdvertisers = advertisersContent.offset().top;
+
+  if (scroll > offsetAdvertisers) {
+    if (startAnim) {
+      kaScroll.init();
+    }
+    
+    startAnim = false;
+  }
+});
+
+const kaScroll = (function ($) {
+  let s;
+  let animation = true;
+  let speed = 50;
+
+  return {
+    settings: {
+      $wrap: $('.advertisers__row-center'),
+    },
+
+    init: function () {
+      s = this.settings;
+      this.bindUIActions();
+    },
+
+    bindUIActions: function () {
+      kaScroll.slideOne();
+    },
+
+    slideOne: function () {
+      s.$wrap
+        .find('img')
+        .first()
+        .animate(
+          {
+            height: 'toggle',
+          },
+          speed,
+          'linear',
+          function () {
+            kaScroll.appendEnd();
+          }
+        );
+    },
+
+    slideLast: function () {
+      s.$wrap
+        .find('img')
+        .first()
+        .animate(
+          {
+            height: 'toggle',
+          },
+          5000,
+          'linear',
+          function () {
+            kaScroll.appendEnd();
+          }
+        );
+    },
+
+    appendEnd: function () {
+      s.$wrap.find('img').first().appendTo('.advertisers__row-center').show();
+      if (animation) {
+        kaScroll.slideOne();
+      }
+
+      const interval = setInterval(speedincrease, 3000);
+
+      function speedincrease() {
+        speed += 10;
+      }
+
+      if (speed >= 405) {
+        animation = false;
+        clearInterval(interval);
+        setTimeout(() => {
+          advertisersWin.classList.add('full-width');
+        }, 600);
+      }
+    },
+  };
+})(jQuery);

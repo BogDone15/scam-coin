@@ -248,6 +248,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     max-width: 178rem;
     width: 100%;
     margin: 0 auto;
@@ -260,7 +261,7 @@ body {
   &__left {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
 
     &>a,
     &>div {
@@ -328,7 +329,7 @@ body {
   &__menu {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
 
     &>li {
 
@@ -2412,7 +2413,7 @@ body {
         border-radius: 0;
         border: 2px solid red;
         z-index: 6;
-    }
+      }
 
       &:last-child {
         border-bottom: none;
@@ -2487,19 +2488,24 @@ body {
     border-top: 2px solid #76c48e;
     width: 100%;
     height: 14rem;
+
     .rc-anchor-normal {
       height: 100% !important;
       width: 100% !important;
-  }
+    }
+
     &>div {
       width: 100% !important;
       height: 100% !important;
+
       &>div {
         width: 100% !important;
         height: 100% !important;
+
         &>div {
           width: 100% !important;
           height: 100% !important;
+
           &>iframe {
             width: 100% !important;
             height: 100% !important;
@@ -2640,8 +2646,92 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .advertisers {
   padding-top: 8rem;
+
+  &__content {
+    width: 97%;
+    height: 48rem;
+    margin: 5rem auto;
+    border: 2px solid #76c48d;
+    overflow: hidden;
+  }
+
+  &__win {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(12%);
+    z-index: 0;
+    background: #141e16;
+    width: 0;
+    height: 8rem;
+    transition: all .2s ease;
+  }
+
+  &__row {
+
+    &-top,
+    &-main {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-top {
+      position: relative;
+      z-index: 5;
+      border-bottom: 2px solid #76c48d;
+      padding: 2rem 3rem;
+      background: black;
+
+      &-item {
+        font-size: 3.2rem;
+        color: #76c48d;
+        font-weight: 700;
+        color: #76c48d;
+        width: calc(25% - 3rem);
+        text-align: center;
+      }
+    }
+
+    &-center {
+      position: relative;
+      top: -9.8rem;
+      padding: 2rem 0;
+      height: 50rem;
+      overflow: hidden;
+
+      &>img {
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        height: 8rem;
+      }
+    }
+
+    &-main {
+      padding: 1rem;
+      max-width: 100%;
+      height: auto;
+
+      &-item {
+        font-size: 4.5rem;
+        color: #76c48d;
+        font-weight: 700;
+        color: rgba(118, 196, 141, .12);
+        width: calc(25% - 3rem);
+        text-align: center;
+      }
+    }
+  }
 
   .fp-tableCell {
     display: flex;
@@ -4167,6 +4257,7 @@ label.error {
   }
 
   .main__btns .btn {
+
     &::before,
     &::after {
       border-left: 6px solid #fff;
@@ -4174,6 +4265,7 @@ label.error {
       height: 2px;
       left: 1.4rem;
     }
+
     &__element-top,
     &__element-bottom {
       height: 6px;
@@ -4182,7 +4274,9 @@ label.error {
       left: 1.4rem;
     }
   }
+
   .leads__btn>button {
+
     &::before,
     &::after {
       border-left: 6px solid #fff;
@@ -4190,11 +4284,14 @@ label.error {
       height: 2px;
       left: 1.2rem;
     }
+
     &::before {
       top: 1.1rem;
     }
   }
+
   .benefits__cover {
+
     &::before,
     &::after {
       border-left: 6px solid #fff;
@@ -4202,12 +4299,14 @@ label.error {
       height: 2px;
       left: 1.2rem;
     }
+
     &::before {
       top: 1.1rem;
     }
   }
 
   .registration button {
+
     &::before,
     &::after {
       border-left: 6px solid #fff;
@@ -4215,12 +4314,14 @@ label.error {
       height: 2px;
       left: 1.2rem;
     }
+
     &::before {
       top: 1.1rem;
     }
   }
 
   .leads__btn {
+
     &-element-top,
     &-element-bottom {
       height: 6px;

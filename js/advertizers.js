@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  const loaderContainer = document.querySelector('.loader-container');
+  setTimeout(() => {
+    loaderContainer.classList.add('hide-loader');
+  }, 3000);
+
+  if (window.matchMedia('(max-width: 579px)').matches) {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 50) {
+        $('.header').addClass('header-bottom');
+      } else {
+        $('.header').removeClass('header-bottom');
+      }
+    });
+  }
+
   const textarea = document.querySelector('textarea');
   const leadsInput = document.querySelectorAll('.leads__input');
 
@@ -69,7 +84,7 @@ $(document).ready(function () {
     // Тут id того блока, в которм будет анимация
     stringsElement: '#advertisers-strings1', // Тут id блока из которого берем строки для анимации
     typeSpeed: 80, // Скорость печати
-    startDelay: 500, // Задержка перед стартом анимации
+    startDelay: 2500, // Задержка перед стартом анимации
     backSpeed: 50, // Скорость удаления
     showCursor: false,
     loop: false, // Указываем, повторять ли анимацию
@@ -269,6 +284,7 @@ $(document).ready(function () {
 const advertisersContent = $('.advertisers__content');
 const advertisersWin = document.querySelector('.advertisers__win');
 const advertisersWinImg = document.querySelector('.advertisers__win-img');
+const advertisersRowCenter = document.querySelector('.advertisers__row-center');
 let startAnim = true;
 
 $(window).scroll(function () {
@@ -305,29 +321,13 @@ const kaScroll = (function ($) {
 
     slideOne: function () {
       s.$wrap
-        .find('img')
-        .first()
-        .animate(
-          {
-            height: 'toggle',
-          },
-          speed,
-          'linear',
-          function () {
-            kaScroll.appendEnd();
-          }
-        );
-    },
-
-    slideLast: function () {
-      s.$wrap
         .find('.advertisers__img-num')
         .first()
         .animate(
           {
             height: 'toggle',
           },
-          5000,
+          speed,
           'linear',
           function () {
             kaScroll.appendEnd();
@@ -355,6 +355,7 @@ const kaScroll = (function ($) {
         animation = false;
         clearInterval(interval);
         setTimeout(() => {
+          advertisersRowCenter.classList.add('hide-center-img');
           advertisersWinImg.classList.add('opacity');
           advertisersWin.classList.add('full-width');
         }, 600);

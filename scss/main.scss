@@ -307,8 +307,12 @@ body {
   }
 
   &__img {
-    max-width: 79.2rem;
+    max-width: 74rem;
     width: 100%;
+
+    &-mob {
+      display: none;
+    }
   }
 
   .container {
@@ -323,7 +327,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   &__menu {
@@ -601,7 +605,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 22rem;
+    gap: 10rem;
     margin-top: 6rem;
     padding: 7.4rem 7.8rem 4.2rem 6.9rem;
 
@@ -625,7 +629,7 @@ body {
   &__item {
     position: relative;
     z-index: 2;
-    max-width: 34.5rem;
+    max-width: 41rem;
     width: 100%;
     transition: all .4s linear;
     opacity: 0;
@@ -2720,6 +2724,14 @@ img {
       height: 50rem;
       overflow: hidden;
 
+      &.hide-center-img {
+        .advertisers__img-num {
+          &:nth-child(5) {
+            opacity: 0;
+          }
+        }
+      }
+
       &>img {
         position: relative;
         z-index: 2;
@@ -3738,7 +3750,7 @@ img {
   }
 
   &__block {
-    margin: 5rem 0 16rem;
+    margin: 5rem 0 13rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -4067,6 +4079,15 @@ label.error {
     background: url('../img/bg-mob-first.jpg') center/cover no-repeat;
   }
 
+  .garant,
+  .benefits,
+  .offers,
+  .manager,
+  .info,
+  .footer {
+    margin-top: 18rem;
+  }
+
   label.error {
     font-size: 1.7rem;
   }
@@ -4184,7 +4205,8 @@ label.error {
   }
 
   .main {
-    padding-top: 20rem;
+    min-height: 100vh;
+    padding-top: 13rem;
 
     &__content {
       margin-top: 5rem;
@@ -4198,7 +4220,7 @@ label.error {
     }
 
     &__text {
-      margin-bottom: 13rem;
+      margin-bottom: 10rem;
     }
 
     &__title {
@@ -4266,6 +4288,12 @@ label.error {
 
     &__img {
       display: none;
+
+      &-mob {
+        display: block;
+        width: 90%;
+        margin: 0 auto 8rem;
+      }
     }
   }
 
@@ -4434,7 +4462,6 @@ label.error {
   }
 
   .garant {
-    margin-top: 15rem;
 
     &__suptitle,
     &__subtitle {
@@ -4450,6 +4477,8 @@ label.error {
     }
 
     &__wrapper {
+      margin-top: 10rem;
+
       &-desk {
         display: none;
       }
@@ -4502,11 +4531,10 @@ label.error {
   }
 
   .swiper {
-    padding: 10rem 0 5rem;
+    padding: 14rem 0 6rem;
   }
 
   .info {
-    margin-top: 15rem;
 
     .container {
       padding: 0 !important;
@@ -4641,6 +4669,10 @@ label.error {
       gap: 10rem;
     }
 
+    &__subtitle {
+      margin-bottom: 7.5rem;
+    }
+
     &__status {
       font-size: 2.5rem;
     }
@@ -4728,6 +4760,8 @@ label.error {
   }
 
   .registration {
+    padding-bottom: 18rem;
+
     button {
       &>span {
         font-size: 3.5rem;
@@ -4826,6 +4860,8 @@ label.error {
   }
 
   .popup {
+    padding-bottom: 18rem;
+
     &__back {
       top: 110%;
       left: 50%;
@@ -4840,6 +4876,7 @@ label.error {
 
   .cooperation__title {
     max-width: 100%;
+    margin-bottom: 10rem;
   }
 
   .cooperation__rights-desk {
@@ -4851,6 +4888,7 @@ label.error {
     font-size: 2rem;
     line-height: 2.2rem;
     margin-top: 6rem;
+    padding-bottom: 16rem;
   }
 
   .cooperation__logo {
@@ -4962,7 +5000,6 @@ label.error {
   }
 
   .footer {
-    margin-top: 7rem;
     padding-bottom: 16rem;
 
     &__block {
@@ -5013,6 +5050,14 @@ label.error {
 
   .advertisers {
     padding-top: 14rem;
+
+    &__row-top-item {
+      font-size: 2.4rem;
+    }
+
+    &__win-img {
+      transform: translate(-50%, -1%);
+    }
 
     &__subtitle {
       font-size: 3.5rem;
@@ -5188,6 +5233,7 @@ label.error {
 
   .news-page {
     padding-bottom: 5rem;
+    margin-top: 0;
   }
 
   .news-page .info__wrapper {
@@ -5211,7 +5257,35 @@ label.error {
       }
     }
   }
+}
 
+@media screen and (max-width: 380px) {
+  .main {
+    padding-top: 18rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .advertisers__row-top-item {
+    font-size: 2.1rem;
+  }
+
+  .header__wrapper-mob-top {
+    gap: 5rem;
+  }
+
+  .header__wrapper-mob-bottom {
+    gap: 3rem;
+  }
+
+  .header__wrapper-mob-left>p {
+    font-size: 2.8rem;
+  }
+
+  .info__title {
+    font-size: 8.9rem;
+    text-align: center;
+  }
 }
 
 .menu-open {

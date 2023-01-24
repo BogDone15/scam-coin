@@ -271,7 +271,32 @@
         </div>
     </section>
 
+    <div class="loader-container">
+        <div class="loader-start">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script>
+        if (window.matchMedia('(max-width: 579px)').matches) {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 50) {
+                    $('.header').addClass('header-bottom');
+                } else {
+                    $('.header').removeClass('header-bottom');
+                }
+            });
+        }
+
+        const loaderContainer = document.querySelector('.loader-container');
+        setTimeout(() => {
+            loaderContainer.classList.add('hide-loader');
+        }, 3000);
+
         const menuOpen = document.querySelector('.menu__open');
         const menuClose = document.querySelector('.menu__close');
         const menuTop = document.querySelector('.header__wrapper-mob-top');

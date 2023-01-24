@@ -190,7 +190,7 @@
         <p class="leads__text">
           Fill out simple form and we will do everything ourselves
         </p>
-        <form action="" class="leads__form" method="post" id="reg">
+        <form action="" class="leads__form form">
           <div class="leads__wrapper">
             <div class="leads__cover">
               <div class="leads__add-input"></div>
@@ -209,7 +209,7 @@
             <textarea name="textarea" id="" cols="30" rows="10" placeholder="YOUR MASSAGE"></textarea>
           </div>
           <div class="leads__btn">
-            <button type="submit">
+            <button type="submit" class="submit-btn">
               <div class="leads__btn-element-top"></div>
               <div class="leads__btn-element-bottom"></div>
               <img src="img/registration1.svg" alt="" class="leads__btn-normal">
@@ -268,134 +268,53 @@
     </div>
   </div>
 
+  <div class="popup">
+    <div class="popup__wrapper">
+        <img src="img/back.svg" alt="" class="popup__back">
+        <div class="popup__top">REGISTRATION APPROVED</div>
+        <div class="popup__content">
+            <img src="img/circles.svg" alt="" class="popup__circles">
+            <div id="typed1"></div>
+            <div id="typed2"></div>
+            <div id="typed3"></div>
+            <div id="typed4"></div>
+            <div id="typed5"></div>
+            <div id="typed6"></div>
+            <div id="typed7"></div>
+            <div id="typed8"></div>
+            <div id="typed-strings1">
+                <span>&lt;!-- HTML4 --&gt;</span>
+            </div>
+            <div id="typed-strings2">
+                <span>&lt;script type="text/javascript" src="javascript.js"&gt; &lt;/script&gt;</span>
+            </div>
+            <div id="typed-strings3">
+                <span>&lt;!-- HTML5 --&gt;</span>
+            </div>
+            <div id="typed-strings4">
+                <span> &lt;script&gt; src="javascript.js"&gt;&lt;/script&gt;</span>
+            </div>
+            <div id="typed-strings5">
+                <span>// WELCOME PARTNER</span>
+            </div>
+            <div id="typed-strings6">
+                <span>/ REGISTRATION SUCCESESS</span>
+            </div>
+            <div id="typed-strings7">
+                <span>/ OUR MANAGER WILL CONTACT YOU SOON</span>
+            </div>
+            <div id="typed-strings8">
+                <span>/EXIT</span>
+            </div>
+        </div>
+    </div>
+</div>
+
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/typed.js"></script>
-  <script src="js/form.js"></script>
-
-  <script>
-    const textarea = document.querySelector('textarea')
-    const leadsInput = document.querySelectorAll('.leads__input')
-
-
-    if (leadsInput) {
-
-      leadsInput.forEach(item => {
-        item.addEventListener('focus', (e) => {
-          e.target.previousElementSibling.style.display = 'none'
-        })
-      })
-    }
-
-    if (textarea) {
-      textarea.addEventListener('focus', (e) => {
-        e.target.previousElementSibling.style.display = 'none'
-      })
-    }
-
-
-    const prevSlide = document.querySelector('.prev-slide')
-    const nextSlide = document.querySelector('.next-slide')
-    const currentPos = document.querySelector('#currentPos')
-
-    document.querySelectorAll(`[data-pos="1"]`).forEach(item => {
-      item.style.display = 'block'
-    })
-
-    let counter = 1;
-
-
-
-    const showNextSlide = () => {
-      if (counter < 6) {
-
-        document.querySelectorAll(`[data-pos="${counter}"]`).forEach(item => {
-          item.style.display = 'none'
-        })
-
-        document.querySelectorAll(`[data-pos="${counter + 1}"]`).forEach(item => {
-          item.style.display = 'block'
-        })
-
-        counter++
-
-        currentPos.textContent = counter
-      }
-    }
-
-    const showPrevSlide = () => {
-      if (counter > 1) {
-
-        document.querySelectorAll(`[data-pos="${counter}"]`).forEach(item => {
-          item.style.display = 'none'
-        })
-
-        document.querySelectorAll(`[data-pos="${counter - 1}"]`).forEach(item => {
-          item.style.display = 'block'
-        })
-
-        counter--
-
-        currentPos.textContent = counter
-      }
-    }
-
-    nextSlide.addEventListener('click', (showNextSlide))
-    prevSlide.addEventListener('click', (showPrevSlide))
-
-    var typed = new Typed('#advertisers1', {
-      // Тут id того блока, в которм будет анимация
-      stringsElement: '#advertisers-strings1', // Тут id блока из которого берем строки для анимации
-      typeSpeed: 80, // Скорость печати
-      startDelay: 500, // Задержка перед стартом анимации
-      backSpeed: 50, // Скорость удаления
-      showCursor: false,
-      loop: false, // Указываем, повторять ли анимацию
-    });
-
-
-    const advertisersLeft = document.querySelector('.advertisers__left');
-
-    const advertisersImg = document.querySelector(
-      '.advertisers__left-block-cover-img'
-    );
-    const advertisersRightTop = document.querySelector('.advertisers__right-top');
-    const advertisersRightBottom = document.querySelector(
-      '.advertisers__right-bottom'
-    );
-
-    setTimeout(() => {
-      advertisersLeft.classList.add('scale')
-    }, 1500);
-
-    setTimeout(() => {
-      advertisersImg.classList.add('opacity')
-    }, 1800);
-
-    setTimeout(() => {
-      advertisersRightTop.classList.add('scale')
-    }, 1800);
-
-    setTimeout(() => {
-      advertisersRightBottom.classList.add('scale')
-    }, 1800);
-
-    const menuOpen = document.querySelector('.menu__open');
-  const menuClose = document.querySelector('.menu__close');
-  const menuTop = document.querySelector('.header__wrapper-mob-top');
-  const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
-
-  menuOpen.addEventListener('click', () => {
-    menuBottom.classList.add('show-item');
-    menuTop.classList.add('menu-open');
-  });
-
-  menuClose.addEventListener('click', () => {
-    menuBottom.classList.remove('show-item');
-    menuTop.classList.remove('menu-open');
-  });
-
-  </script>
+  <!-- <script src="js/form.js"></script> -->
+  <script src="js/advertizers.js"></script>
 
 </body>
 

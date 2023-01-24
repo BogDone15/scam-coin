@@ -305,24 +305,24 @@
     ALL RIGHTS RESERVED
    </p>
   </div>
-
-  <script>
-   const menuOpen = document.querySelector('.menu__open');
-   const menuClose = document.querySelector('.menu__close');
-   const menuTop = document.querySelector('.header__wrapper-mob-top');
-   const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
-
-   menuOpen.addEventListener('click', () => {
-       menuBottom.classList.add('show-item');
-       menuTop.classList.add('menu-open');
-   });
-
-   menuClose.addEventListener('click', () => {
-       menuBottom.classList.remove('show-item');
-       menuTop.classList.remove('menu-open');
-   });
-</script>
  </div>
+
+ <script>
+  const menuOpen = document.querySelector('.menu__open');
+  const menuClose = document.querySelector('.menu__close');
+  const menuTop = document.querySelector('.header__wrapper-mob-top');
+  const menuBottom = document.querySelector('.header__wrapper-mob-bottom');
+
+  menuOpen.addEventListener('click', () => {
+   menuBottom.classList.add('show-item');
+   menuTop.classList.add('menu-open');
+  });
+
+  menuClose.addEventListener('click', () => {
+   menuBottom.classList.remove('show-item');
+   menuTop.classList.remove('menu-open');
+  });
+ </script>
 
 </body>
 

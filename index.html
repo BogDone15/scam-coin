@@ -1473,14 +1473,14 @@
                     <h2 class="registration__title">
                         Registration
                     </h2>
-                    <form>
+                    <form class="form">
                         <div class="registration__top">
                             <div class="registration__left">
                                 <img src="img/photo.png" alt="">
                             </div>
                             <div class="registration__right">
                                 <input type="text" placeholder="YOUR NAME">
-                                <input type="email" placeholder="YOUR EMAIL">
+                                <input type="email" name="email" id="email" placeholder="YOUR EMAIL">
                                 <input type="text" placeholder="TELEGRAM">
                                 <input type="text" placeholder="SKYPE">
                             </div>
@@ -1498,7 +1498,7 @@
                             </div>
                         </div>
                         <div class="registration__capcha">
-                            <div class="g-recaptcha" style="" data-sitekey="6LcjjR4kAAAAAJIrLtBmxxsqdPiNnemXUzVvvPCa"></div>
+                            <!-- <div class="g-recaptcha" data-sitekey="6LcjjR4kAAAAAJIrLtBmxxsqdPiNnemXUzVvvPCa"></div> -->
                         </div>
                         <div class="registration__terms">
                             <label class="registration__container">
@@ -1510,6 +1510,7 @@
                         </div>
                         <div class="registration__group">
                             <button type="button" class="submit-btn">
+                            <!-- <button type="submit" class="submit-btn"> -->
                                 <div class="leads__btn-element-top"></div>
                                 <div class="leads__btn-element-bottom"></div>
                                 <img src="img/registration1.svg" alt="" class="registration__btns-normal">
@@ -1574,7 +1575,8 @@
         </div>
 
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+        <script src="js/jquery.validate.min.js"></script>
         <script src="js/jquery.marquee.min.js"></script>
         <script src="js/seedrandom.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.min.js"></script>

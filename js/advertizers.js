@@ -268,6 +268,7 @@ $(document).ready(function () {
 
 const advertisersContent = $('.advertisers__content');
 const advertisersWin = document.querySelector('.advertisers__win');
+const advertisersWinImg = document.querySelector('.advertisers__win-img');
 let startAnim = true;
 
 $(window).scroll(function () {
@@ -278,7 +279,7 @@ $(window).scroll(function () {
     if (startAnim) {
       kaScroll.init();
     }
-    
+
     startAnim = false;
   }
 });
@@ -320,7 +321,7 @@ const kaScroll = (function ($) {
 
     slideLast: function () {
       s.$wrap
-        .find('img')
+        .find('.advertisers__img-num')
         .first()
         .animate(
           {
@@ -335,7 +336,11 @@ const kaScroll = (function ($) {
     },
 
     appendEnd: function () {
-      s.$wrap.find('img').first().appendTo('.advertisers__row-center').show();
+      s.$wrap
+        .find('.advertisers__img-num')
+        .first()
+        .appendTo('.advertisers__row-center')
+        .show();
       if (animation) {
         kaScroll.slideOne();
       }
@@ -350,6 +355,7 @@ const kaScroll = (function ($) {
         animation = false;
         clearInterval(interval);
         setTimeout(() => {
+          advertisersWinImg.classList.add('opacity');
           advertisersWin.classList.add('full-width');
         }, 600);
       }

@@ -307,7 +307,7 @@ body {
   }
 
   &__img {
-    max-width: 74rem;
+    max-width: 78rem;
     width: 100%;
 
     &-mob {
@@ -605,9 +605,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10rem;
+    gap: 6rem;
     margin-top: 6rem;
-    padding: 7.4rem 7.8rem 4.2rem 6.9rem;
+    padding: 6rem 4rem;
 
     &-mob {
       display: none;
@@ -629,7 +629,7 @@ body {
   &__item {
     position: relative;
     z-index: 2;
-    max-width: 41rem;
+    max-width: 51rem;
     width: 100%;
     transition: all .4s linear;
     opacity: 0;
@@ -2535,7 +2535,6 @@ body {
     padding-left: 2rem;
     cursor: pointer;
     line-height: 20px;
-    // display: inline-block;
     color: #666;
   }
 
@@ -2558,7 +2557,6 @@ body {
     content: '';
     width: 6.6rem;
     height: 6.6rem;
-    // background: #76c48e;
     box-shadow: inset 0 6.4rem 0 0 #76c48e;
     position: absolute;
     top: 0;
@@ -2614,7 +2612,6 @@ body {
     border-right: 2px solid #76c48e;
     transition: all 0.2s ease;
 
-    // background-color: #76c48e;
     &>img {
       margin-left: 1rem;
       margin-top: 1rem;
@@ -2625,11 +2622,6 @@ body {
       background-size: contain;
       background-repeat: no-repeat;
     }
-  }
-
-  /* On mouse-over, add a grey background color */
-  .registration__container:hover input~.checkmark {
-    // background-color: transparent;
   }
 
   /* When the checkbox is checked, add a green background */
@@ -3505,7 +3497,6 @@ img {
   &__item {
     position: relative;
     border: 2px solid #76c48d;
-    // width: calc(25% - 1rem);
     width: 29.4rem;
     height: 29.4rem;
     transition: all .2s ease;
@@ -4291,7 +4282,7 @@ label.error {
 
       &-mob {
         display: block;
-        width: 90%;
+        width: 95%;
         margin: 0 auto 8rem;
       }
     }

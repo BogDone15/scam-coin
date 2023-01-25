@@ -102,19 +102,19 @@ $(document).ready(function () {
 
   setTimeout(() => {
     advertisersLeft.classList.add('scale');
-  }, 1500);
+  }, 3500);
 
   setTimeout(() => {
     advertisersImg.classList.add('opacity');
-  }, 1800);
+  }, 3800);
 
   setTimeout(() => {
     advertisersRightTop.classList.add('scale');
-  }, 1800);
+  }, 3800);
 
   setTimeout(() => {
     advertisersRightBottom.classList.add('scale');
-  }, 1800);
+  }, 3800);
 
   const menuOpen = document.querySelector('.menu__open');
   const menuClose = document.querySelector('.menu__close');
